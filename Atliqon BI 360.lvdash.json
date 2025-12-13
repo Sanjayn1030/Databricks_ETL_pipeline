@@ -46,12 +46,14 @@
             "name": "e20aa60a",
             "multilineTextboxSpec": {
               "lines": [
-                "<span style=\"text-align:center;display:block;\"><span style=\"font-size:30px\">Sales Insights</span></span>"
+                "# <span style=\"text-align:center;display:block;\">Sales Insights Dashboard\r</span>\n",
+                "\n",
+                "### <span style=\"text-align:center;display:block;\">FMCG | SportsBar Consolidated Performance (2025)</span>"
               ]
             },
             "specExtensions": {
               "widgetBackgroundColor": {
-                "light": "#1C4E84"
+                "light": "#5366CF"
               },
               "widgetBorderColor": {
                 "light": "#5A5A5A"
@@ -61,8 +63,8 @@
           "position": {
             "x": 0,
             "y": 0,
-            "width": 6,
-            "height": 1
+            "width": 2,
+            "height": 3
           }
         },
         {
@@ -106,8 +108,8 @@
             }
           },
           "position": {
-            "x": 0,
-            "y": 2,
+            "x": 2,
+            "y": 3,
             "width": 1,
             "height": 2
           }
@@ -153,8 +155,8 @@
             }
           },
           "position": {
-            "x": 1,
-            "y": 2,
+            "x": 2,
+            "y": 0,
             "width": 1,
             "height": 2
           }
@@ -218,16 +220,57 @@
                 ]
               },
               "frame": {
-                "title": "Top 10 products by total revenue",
+                "title": "Top 10 Products by Revenue",
                 "showTitle": true
+              },
+              "mark": {
+                "colors": [
+                  "#2CA02C",
+                  {
+                    "themeColorType": "visualizationColors",
+                    "position": 2
+                  },
+                  {
+                    "themeColorType": "visualizationColors",
+                    "position": 3
+                  },
+                  {
+                    "themeColorType": "visualizationColors",
+                    "position": 4
+                  },
+                  {
+                    "themeColorType": "visualizationColors",
+                    "position": 5
+                  },
+                  {
+                    "themeColorType": "visualizationColors",
+                    "position": 6
+                  },
+                  {
+                    "themeColorType": "visualizationColors",
+                    "position": 7
+                  },
+                  {
+                    "themeColorType": "visualizationColors",
+                    "position": 8
+                  },
+                  {
+                    "themeColorType": "visualizationColors",
+                    "position": 9
+                  },
+                  {
+                    "themeColorType": "visualizationColors",
+                    "position": 10
+                  }
+                ]
               }
             }
           },
           "position": {
             "x": 0,
-            "y": 4,
+            "y": 6,
             "width": 3,
-            "height": 6
+            "height": 7
           }
         },
         {
@@ -271,7 +314,7 @@
           },
           "position": {
             "x": 0,
-            "y": 1,
+            "y": 3,
             "width": 1,
             "height": 1
           }
@@ -316,8 +359,8 @@
             }
           },
           "position": {
-            "x": 1,
-            "y": 1,
+            "x": 0,
+            "y": 5,
             "width": 1,
             "height": 1
           }
@@ -362,8 +405,8 @@
             }
           },
           "position": {
-            "x": 2,
-            "y": 1,
+            "x": 1,
+            "y": 3,
             "width": 1,
             "height": 1
           }
@@ -408,8 +451,8 @@
             }
           },
           "position": {
-            "x": 3,
-            "y": 1,
+            "x": 0,
+            "y": 4,
             "width": 1,
             "height": 1
           }
@@ -454,8 +497,8 @@
             }
           },
           "position": {
-            "x": 4,
-            "y": 1,
+            "x": 1,
+            "y": 4,
             "width": 1,
             "height": 1
           }
@@ -510,7 +553,7 @@
           },
           "position": {
             "x": 3,
-            "y": 4,
+            "y": 2,
             "width": 3,
             "height": 6
           }
@@ -556,8 +599,8 @@
             }
           },
           "position": {
-            "x": 2,
-            "y": 2,
+            "x": 5,
+            "y": 0,
             "width": 1,
             "height": 2
           }
@@ -604,14 +647,14 @@
           },
           "position": {
             "x": 3,
-            "y": 2,
+            "y": 0,
             "width": 1,
             "height": 2
           }
         },
         {
           "widget": {
-            "name": "e26fd86d",
+            "name": "28ffcdf5",
             "queries": [
               {
                 "name": "main_query",
@@ -619,12 +662,160 @@
                   "datasetName": "10bc733b",
                   "fields": [
                     {
-                      "name": "variant",
-                      "expression": "`variant`"
+                      "name": "count(product_code)",
+                      "expression": "COUNT(`product_code`)"
+                    }
+                  ],
+                  "disaggregated": false
+                }
+              }
+            ],
+            "spec": {
+              "version": 2,
+              "widgetType": "counter",
+              "encodings": {
+                "value": {
+                  "fieldName": "count(product_code)"
+                }
+              },
+              "frame": {
+                "showTitle": true,
+                "title": "Number of Active Products"
+              }
+            },
+            "specExtensions": {
+              "widgetBackgroundColor": {
+                "light": "#98A4A1"
+              },
+              "widgetBorderColor": {
+                "light": "#154674"
+              }
+            }
+          },
+          "position": {
+            "x": 4,
+            "y": 0,
+            "width": 1,
+            "height": 2
+          }
+        },
+        {
+          "widget": {
+            "name": "5f5da72d",
+            "queries": [
+              {
+                "name": "main_query",
+                "query": {
+                  "datasetName": "10bc733b",
+                  "fields": [
+                    {
+                      "name": "sum(total_amount_inr)",
+                      "expression": "SUM(`total_amount_inr`)"
                     },
                     {
-                      "name": "total_amount_inr",
-                      "expression": "`total_amount_inr`"
+                      "name": "monthly(date)",
+                      "expression": "DATE_TRUNC(\"MONTH\", `date`)"
+                    }
+                  ],
+                  "disaggregated": false
+                }
+              }
+            ],
+            "spec": {
+              "version": 3,
+              "widgetType": "line",
+              "encodings": {
+                "x": {
+                  "fieldName": "monthly(date)",
+                  "scale": {
+                    "type": "temporal"
+                  }
+                },
+                "y": {
+                  "fieldName": "sum(total_amount_inr)",
+                  "scale": {
+                    "type": "quantitative"
+                  }
+                },
+                "label": {
+                  "show": true
+                },
+                "extra": [
+                  {
+                    "fieldName": "sum(total_amount_inr)"
+                  }
+                ]
+              },
+              "frame": {
+                "title": "Monthly Revenue Trend",
+                "showTitle": true
+              },
+              "mark": {
+                "colors": [
+                  "#FF2121",
+                  {
+                    "themeColorType": "visualizationColors",
+                    "position": 2
+                  },
+                  {
+                    "themeColorType": "visualizationColors",
+                    "position": 3
+                  },
+                  {
+                    "themeColorType": "visualizationColors",
+                    "position": 4
+                  },
+                  {
+                    "themeColorType": "visualizationColors",
+                    "position": 5
+                  },
+                  {
+                    "themeColorType": "visualizationColors",
+                    "position": 6
+                  },
+                  {
+                    "themeColorType": "visualizationColors",
+                    "position": 7
+                  },
+                  {
+                    "themeColorType": "visualizationColors",
+                    "position": 8
+                  },
+                  {
+                    "themeColorType": "visualizationColors",
+                    "position": 9
+                  },
+                  {
+                    "themeColorType": "visualizationColors",
+                    "position": 10
+                  }
+                ]
+              }
+            }
+          },
+          "position": {
+            "x": 0,
+            "y": 13,
+            "width": 3,
+            "height": 6
+          }
+        },
+        {
+          "widget": {
+            "name": "8a262f64",
+            "queries": [
+              {
+                "name": "main_query",
+                "query": {
+                  "datasetName": "10bc733b",
+                  "fields": [
+                    {
+                      "name": "price_inr",
+                      "expression": "`price_inr`"
+                    },
+                    {
+                      "name": "sold_quantity",
+                      "expression": "`sold_quantity`"
                     }
                   ],
                   "disaggregated": true
@@ -633,31 +824,94 @@
             ],
             "spec": {
               "version": 3,
-              "widgetType": "bar",
+              "widgetType": "scatter",
               "encodings": {
                 "x": {
-                  "fieldName": "variant",
+                  "fieldName": "price_inr",
                   "scale": {
-                    "type": "categorical"
+                    "type": "quantitative"
                   }
                 },
                 "y": {
-                  "fieldName": "total_amount_inr",
+                  "fieldName": "sold_quantity",
                   "scale": {
                     "type": "quantitative"
                   }
                 }
               },
               "frame": {
-                "title": "Top 10 Variants by Revenue",
+                "title": "Price vs Quantity Distribution",
+                "showTitle": true,
+                "showDescription": false
+              }
+            }
+          },
+          "position": {
+            "x": 3,
+            "y": 8,
+            "width": 3,
+            "height": 5
+          }
+        },
+        {
+          "widget": {
+            "name": "d428ef9c",
+            "queries": [
+              {
+                "name": "main_query",
+                "query": {
+                  "datasetName": "10bc733b",
+                  "fields": [
+                    {
+                      "name": "category",
+                      "expression": "`category`"
+                    },
+                    {
+                      "name": "month_short_name",
+                      "expression": "`month_short_name`"
+                    },
+                    {
+                      "name": "sum(total_amount_inr)",
+                      "expression": "SUM(`total_amount_inr`)"
+                    }
+                  ],
+                  "disaggregated": false
+                }
+              }
+            ],
+            "spec": {
+              "version": 3,
+              "widgetType": "area",
+              "encodings": {
+                "x": {
+                  "fieldName": "month_short_name",
+                  "scale": {
+                    "type": "categorical"
+                  }
+                },
+                "y": {
+                  "fieldName": "sum(total_amount_inr)",
+                  "scale": {
+                    "type": "quantitative"
+                  }
+                },
+                "color": {
+                  "fieldName": "category",
+                  "scale": {
+                    "type": "categorical"
+                  }
+                }
+              },
+              "frame": {
+                "title": "Category Share Over Time",
                 "showTitle": true
               }
             }
           },
           "position": {
-            "x": 0,
-            "y": 10,
-            "width": 6,
+            "x": 3,
+            "y": 13,
+            "width": 3,
             "height": 6
           }
         }
