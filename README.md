@@ -1,8 +1,8 @@
-# TITLE : FMCG Data Engineering Project: End-to-End ETL Pipeline with Databricks, AWS S3, and BI Dashboarding
+# TITLE :  Data Engineering Project: End-to-End ETL Pipeline with Databricks, AWS S3, and BI Dashboarding
 
 A complete consolidation of Atlon and SportsBar sales data using a Medallion Architecture (Bronze–Silver–Gold), automated ETL pipelines, and a unified Sales Insights dashboard.
 
-## FMCG Data Engineering Project – Atlon & SportsBar Consolidation
+## Data Engineering Project – Atlon & SportsBar Consolidation
 #### Overview
 
 This project builds a complete data engineering pipeline using Databricks Free Edition. It brings together two very different data ecosystems:
