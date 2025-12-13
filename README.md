@@ -236,3 +236,8 @@ It meets the three goals set at the start:
 1)  unified insights
 2) low learning curve
 3) scalable architecture
+
+
+## 📊 Dashboard Preview
+![Dashboard Preview](images/Dashboard%20image%20.png)
+
